@@ -25,8 +25,6 @@ export default class Paddle {
 		//find the max
 		//paddle either needs to be at 0 or the position minus the speed
 		this.y = Math.max(0, this.y - this.speed);
-
-
 	}
 
 	down() {
@@ -34,8 +32,6 @@ export default class Paddle {
 		//either the height or the board minus the height of the paddle 
 		//or the y position plus the speed 
 		this.y = Math.min(this.boardHeight - this.height, this.y + this.speed);
-
-
 	}
 
 
