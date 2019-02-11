@@ -33,6 +33,13 @@ export default class Paddle {
 		//or the y position plus the speed 
 		this.y = Math.min(this.boardHeight - this.height, this.y + this.speed);
 	}
+	coordinates(x, y, width, height) {
+		let leftX = x;
+		let rightX= x;
+		let topY = y;
+		let bottomY = y + height;
+		return [leftX, rightX, topY, bottomY];
+	}
 
 
 	render(svg) {
@@ -50,4 +57,6 @@ export default class Paddle {
 		svg.appendChild(rect);
 
 	}
-}
+	
+
+	}
